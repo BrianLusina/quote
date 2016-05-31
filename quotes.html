@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+<meta charset="utf-8">
+<title>Daily Quotes</title>
+<!--External CSS-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css" type="text/css" />
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" type="text/css" />
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/js" />
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js" type="text/js" />
+
+<!--Internal CSS-->
+<link rel="stylesheet" href="quotes.css" type="text/css" />
+</head>
+
+<body>
+<div class="quoteContainer">
+  <!--Quote  -->
+  <div class="quoteText">
+    <i class="fa fa-quote-left"> </i>
+    <span class="quote"></span>
+    <i class="fa fa-quote-right"></i>
+  </div>
+  
+  <!--Author  -->
+  <div class="quoteAuthor">
+    --<span id="author"></span>
+  </div>
+  
+  <!--Share button  -->
+  <div class="quoteButtons">
+    <a class="button" id="tweet-quote" title="Tweet this quote!" target="_blank">
+     <i class="fa fa-twitter"></i>
+    </a>
+    
+    <a class="button" id="tumblr-quote" title="Post this quote on tumblr!" target="_blank">
+      <i class="fa fa-tumblr"></i>
+    </a>
+    
+    <a class="button" id="facebook-quote" title="Post this quote on Facebook!" target="_blank">
+      <i class="fa fa-facebook"></i>
+    </a>
+    
+    <a class="button" id="googlePlus-quote" title="Post this quote on Google+!" target="_blank">
+      <i class="fa fa-google-plus"></i>
+    </a>
+    
+    <!--New Quote  -->
+    <button class="button" id="new-quote">New quote</button>
+  </div>
+</div>
+
+<div class="footer">
+by <a href="https://codepen.io/mercury/">Mercury</>
+</div>
+</body>
+</html>
