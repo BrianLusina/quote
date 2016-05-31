@@ -9,12 +9,8 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css" type="text/css" />
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" type="text/css" />
-
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/js" />
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js" type="text/js" />
-
 <!--Internal CSS-->
-<link rel="stylesheet" href="quotes.css" type="text/css" />
+<link rel="stylesheet" href="css/quotes.css" type="text/css" />
 </head>
 
 <body>
@@ -22,7 +18,7 @@
   <!--Quote  -->
   <div class="quoteText">
     <i class="fa fa-quote-left"> </i>
-    <span class="quote"></span>
+    <span id="quote"></span>
     <i class="fa fa-quote-right"></i>
   </div>
   
@@ -33,29 +29,31 @@
   
   <!--Share button  -->
   <div class="quoteButtons">
-    <a class="button" id="tweet-quote" title="Tweet this quote!" target="_blank">
-     <i class="fa fa-twitter"></i>
+    <a class="socialButton" id="tweet-quote" title="Tweet this quote!" target="_blank">
+     <i class="fa fa-twitter fa-2x"></i>
     </a>
     
-    <a class="button" id="tumblr-quote" title="Post this quote on tumblr!" target="_blank">
-      <i class="fa fa-tumblr"></i>
+    <a class="socialButton" id="tumblr-quote" title="Post this quote on tumblr!" target="_blank">
+      <i class="fa fa-tumblr fa-2x"></i>
+    </a>
+   
+    <a class="socialButton" id="facebook-quote" title="Post this quote on Facebook!" target="_blank">
+      <i class="fa fa-facebook fa-2x"></i>
     </a>
     
-    <a class="button" id="facebook-quote" title="Post this quote on Facebook!" target="_blank">
-      <i class="fa fa-facebook"></i>
-    </a>
-    
-    <a class="button" id="googlePlus-quote" title="Post this quote on Google+!" target="_blank">
-      <i class="fa fa-google-plus"></i>
+    <a class="socialButton" id="googlePlus-quote" title="Post this quote on Google+!" target="_blank">
+      <i class="fa fa-google-plus fa-2x"></i>
     </a>
     
     <!--New Quote  -->
     <button class="button" id="new-quote">New quote</button>
+    
   </div>
 </div>
 
 <div class="footer">
-by <a href="https://codepen.io/mercury/">Mercury</>
+  Made with <i class="fa fa-heart"></i> and <i class="fa fa-coffee"></i> by <a href="https://codepen.io/mercury/">Mercury</a>
 </div>
+
 </body>
 </html>

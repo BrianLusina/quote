@@ -25,11 +25,9 @@ body {
   padding:40px 50px;
   display:table;
   background-color:#fff;
-  .quoteText {
-    i{
-      font-size:1.0em;
-      margin-right: 0.4em;
-    }
+}
+
+.quoteText {
     text-align:center;
     width:450px;
     height:auto;
@@ -37,37 +35,54 @@ body {
     font-weight:500;
     font-size:1.75em;
   }
-  .quoteAuthor {
+
+i{
+  font-size:1.0em;
+  margin-right: 0.4em;
+}
+
+.quoteAuthor {
     width:450px;
     height:auto;
     clear:both;
     padding-top:20px;
     font-size:1em; 
     text-align:right;
-  }
-/*Buttons*/
+}
+
 .quoteButtons {
     width:450px;
     margin:auto;
     display:block;
-    .button {
-      height:38px;
-      border:none;
-      border-radius:3px;
-      color:#fff;
-      background-color:#333;
-      outline:none;
-      font-size:0.85em;
-      padding: 8px 18px 6px 18px;
-      margin-top:30px;
-      opacity:1;
-      cursor:pointer;
-      &:hover {
-        opacity:0.9;
-      }
-      &#tweet-quote, &#tumblr-quote &#facebook-quote,&#googlePlus-quote{
+  }
+
+.button {
+    height: 35px;
+    border: none;
+    border-radius: 40px;
+    color: #fff;
+    background-color: #333;
+    outline: none;
+    font-size: 0.85em;
+    padding: 10px 13px 10px 15px;
+    margin-top: 0px;
+    opacity: 1;
+    cursor: pointer;
+    }
+
+.socialButton{
+    height: 35px;
+    border: none;
+    color: #111;
+    font-size: 0.85em;
+    padding: 10px 15px 12px 15px;
+    margin-top: 20px;
+    opacity: 1;
+    cursor: pointer;
+}
+
+#tweet-quote #tumblr-quote #facebook-quote #googlePlus-quote{
         float:left;
-        padding:0px;
         padding-top:8px;
         text-align:center;
         font-size:1.2em;
@@ -75,12 +90,10 @@ body {
         height:30px;
         width:40px;
       }
-      &#new-quote {
+
+#new-quote {
         float:right;
       }
-    }
-  }
-}
 
 .footer {
   width:450px;
@@ -89,9 +102,14 @@ body {
   margin:15px auto 30px auto;
   font-size:0.8em;
   color:#fff;
-  a {
+}
+
+a{
     font-weight:500;
     text-decoration:none;
-    color:#fff;
-  }
+    color:#111;
+}
+
+a:hover{
+  text-decoration:none;
 }
