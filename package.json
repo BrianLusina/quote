@@ -1,10 +1,10 @@
 {
-  "name": "Quote Machine",
+  "name": "quote-machine",
   "version": "0.1.1dev",
   "private": true,
   "description": "Quote machine generating random quotes",
   "main": "index.js",
-    author:"Brian Lusina <lusinabrian@gmail.com>",
+"author":"Brian Lusina <lusinabrian@gmail.com>",
   "repository": {
     "type": "git",
     "url": "https://github.com/BrianLusina/Quote-Machine"
