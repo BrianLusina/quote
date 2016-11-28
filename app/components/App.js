@@ -8,7 +8,7 @@ export default class App extends React.Component{
         return(
             <div>
               <div>
-                <QuoteContainer />
+                <QuoteContainer apiUrl="api/quotes.json"/>
                 <ShareQuote />
                 <NewQuote />
               </div>
