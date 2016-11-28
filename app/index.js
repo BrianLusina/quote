@@ -7,7 +7,7 @@ import jQuery from 'jquery';
 
 const appDoc = document.getElementById('app')
 ReactDOM.render(
-    <App />, 
+    <App />,
     appDoc,
     () => {console.timeEnd("quote-app")}
 );
