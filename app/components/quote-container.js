@@ -11,9 +11,7 @@ export default class QuoteContainer extends React.Component{
     }
   }
 
-  componentWillMount(){
-    this._fetchQuotes();
-  }
+  componentWillMount(){  }
 
   render(){
     return (
@@ -31,6 +29,11 @@ export default class QuoteContainer extends React.Component{
     )
   }
 
+  // perform AJAX request right after mounting
+  componentDidMount(){
+    this._fetchQuotes();
+  }
+
   _getQuotes() {
     return this.state.quotes.map((quote) => {
       return quote;
@@ -45,15 +48,15 @@ export default class QuoteContainer extends React.Component{
   _fetchQuotes(){
     jQuery.ajax({
       method:"GET",
-      url:"https://andruxnet-random-famous-quotes.p.mashape.com/?cat=movies",
+      url:"https://andruxnet-random-famous-quotes.p.mashape.com/?cat=famous",
       headers: {
         "X-Mashape-Key": "HT2nuAA369mshsFX1vMRe7cfr4drp14TBx9jsnovWg3V75k7o5",
         Accept: "application/json",
         "Content-Type": "application/x-www-form-urlencoded"
       },
-      success:(response) => {
-        var json = JSON.parse(response);
-        console.log(response);
+      success:(quotes) => {
+        var json = JSON.parse(quotes);
+        this.setState({quotes});
       },
       error:(request, errorType, errorMessage) => {
         console.error(errorType, errorMessage);
