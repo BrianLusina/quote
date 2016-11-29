@@ -7,7 +7,8 @@ export default class QuoteContainer extends React.Component{
     super();
 
     this.state ={
-      quotes : []
+      author: "",
+      quote: ""
     }
   }
 
@@ -18,11 +19,11 @@ export default class QuoteContainer extends React.Component{
       <div>
         <div className="quoteText">
             <i className="fa fa-quote-left"> </i>
-            <span id="quote"></span>
+            <span id="quote">{ this.state.quote }</span>
             <i className="fa fa-quote-right"></i>
         </div>
         <div className="quoteAuthor">
-        --<span id="author"></span>
+        --<span id="author">{ this.state.author }</span>
         </div>
 
       </div>
@@ -34,12 +35,6 @@ export default class QuoteContainer extends React.Component{
     this._fetchQuotes();
   }
 
-  _getQuotes() {
-    return this.state.quotes.map((quote) => {
-      return quote;
-    });
-  }
-
 /**
 "X-Mashape-Key": "HT2nuAA369mshsFX1vMRe7cfr4drp14TBx9jsnovWg3V75k7o5",
     url: this.props.apiUrl,
@@ -48,15 +43,18 @@ export default class QuoteContainer extends React.Component{
   _fetchQuotes(){
     jQuery.ajax({
       method:"GET",
-      url:"https://andruxnet-random-famous-quotes.p.mashape.com/?cat=famous",
+      url:this.props.apiUrl,
       headers: {
         "X-Mashape-Key": "HT2nuAA369mshsFX1vMRe7cfr4drp14TBx9jsnovWg3V75k7o5",
         Accept: "application/json",
         "Content-Type": "application/x-www-form-urlencoded"
       },
-      success:(quotes) => {
-        var json = JSON.parse(quotes);
-        this.setState({quotes});
+      success:(response) => {
+        var json = JSON.parse(response);
+        let author = json["author"];
+        let quote = json['quote'];
+        this.setState({author, quote});
+        console.log("Update Quote state: " + this.state.quote, this.state.author);
       },
       error:(request, errorType, errorMessage) => {
         console.error(errorType, errorMessage);

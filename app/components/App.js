@@ -8,7 +8,7 @@ export default class App extends React.Component{
         return(
             <div>
               <div>
-                <QuoteContainer apiUrl="api/quotes.json"/>
+                <QuoteContainer apiUrl="https://andruxnet-random-famous-quotes.p.mashape.com/?cat=famous"/>
                 <ShareQuote />
                 <NewQuote />
               </div>
