@@ -25,7 +25,6 @@ export default class QuoteContainer extends React.Component{
         <div className="quoteAuthor">
         --<span id="author">{ this.state.author }</span>
         </div>
-
       </div>
     )
   }
