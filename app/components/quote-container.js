@@ -12,7 +12,7 @@ export default class QuoteContainer extends React.Component{
   }
 
   componentWillMount(){
-    this._getQuotes();
+    this._fetchQuotes();
   }
 
   render(){
@@ -20,7 +20,7 @@ export default class QuoteContainer extends React.Component{
       <div>
         <div className="quoteText">
             <i className="fa fa-quote-left"> </i>
-            <span id="quote">{ quotes }</span>
+            <span id="quote"></span>
             <i className="fa fa-quote-right"></i>
         </div>
         <div className="quoteAuthor">
@@ -37,16 +37,31 @@ export default class QuoteContainer extends React.Component{
     });
   }
 
-//"X-Mashape-Key": "HT2nuAA369mshsFX1vMRe7cfr4drp14TBx9jsnovWg3V75k7o5",
-//url: 'https://kashyap-random_quotes.p.mashape.com/',
+/**
+"X-Mashape-Key": "HT2nuAA369mshsFX1vMRe7cfr4drp14TBx9jsnovWg3V75k7o5",
+    url: this.props.apiUrl,
+*/
 
   _fetchQuotes(){
     jQuery.ajax({
       method:"GET",
-      url: this.props.apiUrl,
-      success:(quotes) => {
-        this.setState({quotes})
+      url:"https://andruxnet-random-famous-quotes.p.mashape.com/?cat=movies",
+      headers: {
+        "X-Mashape-Key": "HT2nuAA369mshsFX1vMRe7cfr4drp14TBx9jsnovWg3V75k7o5",
+        Accept: "application/json",
+        "Content-Type": "application/x-www-form-urlencoded"
       },
+      success:(response) => {
+        var json = JSON.parse(response);
+        console.log(response);
+      },
+      error:(request, errorType, errorMessage) => {
+        console.error(errorType, errorMessage);
+      },
+      timeout: 3000,
+      complete: (response, status) => {
+        console.log(response, status);
+      }
     });
   }
 }
