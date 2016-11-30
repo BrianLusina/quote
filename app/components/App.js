@@ -20,7 +20,7 @@ export default class App extends React.Component{
             <div>
               <div>
                 <QuoteContainer styles={ this.props.styles } author={ this.state.author } quote={ this.state.quote }/>
-                <ShareQuote styles={ this.props.styles }/>
+                <ShareQuote styles={ this.props.styles } author={ this.state.author } quote={ this.state.quote }/>
                 <NewQuote styles={ this.props.styles }/>
               </div>
               <div className={this.props.styles.footer}>
