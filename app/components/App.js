@@ -50,7 +50,7 @@ export default class App extends React.Component{
           let author = json["author"];
           let quote = json['quote'];
           this.setState({author, quote});
-          console.log("Update Quote state: " + this.state.quote, this.state.author);
+          console.log("Qoute", this.state.quote," Author: ", this.state.author);
         },
         error:(request, errorType, errorMessage) => {
           console.error(errorType, errorMessage);
@@ -61,4 +61,8 @@ export default class App extends React.Component{
         }
       });
     }
+}
+
+App.propTypes = {
+  styles : React.PropTypes.object.isRequired,
 }
