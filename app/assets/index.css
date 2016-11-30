@@ -81,7 +81,7 @@ i{
     cursor: pointer;
 }
 
-#tweet-quote #tumblr-quote #facebook-quote #googlePlus-quote{
+#tweetQuote #tumblrQuote #facebookQuote #googlePlusQuote{
         float:left;
         padding-top:8px;
         text-align:center;
@@ -91,7 +91,7 @@ i{
         width:40px;
       }
 
-#new-quote {
+#newQuote {
         float:right;
       }
 
