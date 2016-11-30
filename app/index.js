@@ -6,7 +6,7 @@ import styles from './assets/index.css';
 
 const appDoc = document.getElementById('app')
 ReactDOM.render(
-    <App />,
+    <App styles={ styles }/>,
     appDoc,
     () => {console.timeEnd("quote-app")}
 );
