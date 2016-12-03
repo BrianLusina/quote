@@ -11,7 +11,9 @@ export default class NewQuote extends React.Component{
   render(){
     return(
       <div>
-        <button className={ this.props.styles.button } id={ this.props.styles.newQuote }>New quote</button>
+        <button className={ this.props.styles.button } id={ this.props.styles.newQuote }>
+          New quote
+        </button>
       </div>
     )
   }
