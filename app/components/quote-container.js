@@ -7,8 +7,6 @@ export default class QuoteContainer extends React.Component{
     super();
   }
 
-  componentWillMount(){  }
-
   render(){
     return (
       <div>
@@ -22,9 +20,6 @@ export default class QuoteContainer extends React.Component{
         </div>
       </div>
     )
-  }
-
-  componentDidMount(){
   }
 }
 
