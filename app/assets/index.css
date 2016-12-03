@@ -81,15 +81,15 @@ i{
     cursor: pointer;
 }
 
-#tweetQuote #tumblrQuote #facebookQuote #googlePlusQuote{
-        float:left;
-        padding-top:8px;
-        text-align:center;
-        font-size:1.2em;
-        margin-right:5px;
-        height:30px;
-        width:40px;
-      }
+#shareButtons{
+  float:left;
+  padding-top:8px;
+  text-align:center;
+  font-size:1.2em;
+  margin-right:5px;
+  height:30px;
+  width:40px;
+}
 
 #newQuote {
         float:right;
