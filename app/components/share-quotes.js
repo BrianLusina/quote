@@ -55,9 +55,11 @@ export default class ShareQuote extends React.Component {
                     this._handleGoogleClick
                 } > < i className = "fa fa-google-plus fa-2x" > < /i> < /a > < /div>)
             }
+
             _openUrl(url) {
                 window.open(url, 'Share', 'width=550, height=400, toolbar=0, scrollbars=1 ,location=0 ,statusbar=0,menubar=0, resizable=0');
             }
+
             _inIframe() {
                     try {
                         return window.self !== window.top;
@@ -70,14 +72,18 @@ export default class ShareQuote extends React.Component {
                 //share via tumblr
             _handleTumblrClick(e) {
                     e.preventDefault();
-                    if (!this._inIframe()) {
-                        this._openURL(this.state.tumblrUrl + encodeURIComponent(this.props.author) + '&content=' + encodeURIComponent(this.props.quote));
+                    if(this._inIframe){
+                      this._openUrl(
+                        this.state.tumblrUrl
+                        + encodeURIComponent(this.props.author)
+                        + '&content=' + encodeURIComponent(this.props.quote)
+                      );
                     }
                 }
                 //share view twitter
             _handleTweetClick(e) {
-                    if (!this._inIframe()) {
-                        this._openURL(this.state.tweetUrl + encodeURIComponent('"' + this.props.quote + '" ' + this.props.author));
+                    if (this._inIframe()) {
+                        this._openUrl(this.state.tweetUrl + encodeURIComponent('"' + this.props.quote + '" ' + this.props.author));
                     }
                 }
                 //share via Facebook
