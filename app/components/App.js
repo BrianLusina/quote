@@ -1,7 +1,6 @@
 import React from 'react';
 import QuoteContainer from './quote-container';
 import ShareQuote from './share-quotes';
-import NewQuote from './new-quote';
 import jQuery from 'jquery';
 
 export default class App extends React.Component{
@@ -21,7 +20,6 @@ export default class App extends React.Component{
               <div>
                 <QuoteContainer styles={ this.props.styles } author={ this.state.author } quote={ this.state.quote }/>
                 <ShareQuote styles={ this.props.styles } author={ this.state.author } quote={ this.state.quote }/>
-                <NewQuote styles={ this.props.styles }/>
               </div>
               <div className={this.props.styles.footer}>
                   Made with <i className="fa fa-heart"></i> and <i className="fa fa-coffee"></i> by
@@ -33,9 +31,9 @@ export default class App extends React.Component{
 
     // perform AJAX request right after mounting
     componentDidMount(){
-      this._fetchQuotes().bind(this);
-
+      this._fetchQuotes();
     }
+
     _fetchQuotes(){
       setTimeout(function () {
         jQuery.ajax({
@@ -50,7 +48,7 @@ export default class App extends React.Component{
             var json = JSON.parse(response);
             let author = json["author"];
             let quote = json['quote'];
-            this.setState({author, quote}).bind(this);
+            this.setState({author, quote});
           },
           error:(request, errorType, errorMessage) => {
             console.error(errorType, errorMessage);
@@ -59,7 +57,7 @@ export default class App extends React.Component{
           complete: (response, status) => {
           }
         });
-      }, 10);
+      }.bind(this), 5000);
     }
 }
 
