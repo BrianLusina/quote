@@ -43,30 +43,35 @@ export default class ShareQuote extends React.Component {
                       return true;
                   }
               }
-              //share via tumblr
-            _handleTumblrClick(e) {
-                    e.preventDefault();
-                    if(this._inIframe){
-                      this._openUrl(
-                        this.state.tumblrUrl
-                        + encodeURIComponent(this.props.author)
-                        + '&content=' + encodeURIComponent(this.props.quote)
-                      );
-                    }
-                }
-                //share view twitter
-            _handleTweetClick(e) {
-                    if (this._inIframe()) {
-                        this._openUrl(this.state.tweetUrl + encodeURIComponent('"' + this.props.quote + '" ' + this.props.author));
-                    }
-                }
-                //share via Facebook
-                //share via Google
-
-
+              
             _handleButtonClick(e){
               e.preventDefault();
-              console.log(e.target);
+              var element = e.target.classList;
+              //twitter
+              if(element.contains("fa-twitter")){
+                if (this._inIframe()) {
+                    this._openUrl(this.state.tweetUrl + encodeURIComponent('"' + this.props.quote + '" ' + this.props.author));
+                }
+                //tumblr
+              }
+              //tumblr
+              else if(element.contains("fa-tumblr")){
+                if(this._inIframe){
+                  this._openUrl(
+                    this.state.tumblrUrl
+                    + encodeURIComponent(this.props.author)
+                    + '&content=' + encodeURIComponent(this.props.quote)
+                  );
+                }
+              }
+              //google plus
+              else if(element.contains("fa-google-plus")){
+
+              }
+              //facebook
+              else if(element.contains("fa-facebook")){
+
+              }
             }
         }
         ShareQuote.propTypes = {
