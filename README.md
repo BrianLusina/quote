@@ -1,7 +1,3 @@
 ## Random Quote Machine
 
-Objective: Build a CodePen.io app that is functionally similar to [this](https://codepen.io/FreeCodeCamp/full/ONjoLe/)
-
-Fulfills the following user stories:
-+ User can click a button to show me a new random quote
-+ User  can press a button to tweet out a quote.
+Random Quote machine build on ReactJS library. Displays Random quotes every 30 seconds. User can share the quote on Twitter.
