@@ -1,6 +1,6 @@
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 const HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
-    template:__dirname + "/src/index.html",
+    template:__dirname + "/index.html",
     filename: "index.html",
     inject:"body",
     title:"Quote Machinne",
@@ -18,7 +18,7 @@ module.exports = {
       'webpack-hot-middleware/client',
     ],
   output:{
-      filename: 'app.js',
+      filename: 'bundle.js',
       publicPath:"/public/",
       path: path.join(__dirname + 'public')
   },
