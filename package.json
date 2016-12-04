@@ -42,6 +42,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
+    "build-production": "webpack --config ./webpack.prod.config.js --progress --colors",
     "start-dev": "webpack-dev-server",
     "start-production": "node server.js",
     "postinstall": "webpack -p --config webpack.prod.config.js"
