@@ -1,12 +1,6 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './components/App';
+import React from 'react'
+import { render }from 'react-dom'
+import App from './components/App'
+import styles from './assets/index.css'
 
-import styles from './assets/index.css';
-
-const appDoc = document.getElementById('app')
-ReactDOM.render(
-    <App styles={ styles }/>,
-    appDoc,
-    () => {console.timeEnd("quote-app")}
-);
+render(<App styles= { styles } />, document.getElementById('app'), () => {console.timeEnd("quote-app")});

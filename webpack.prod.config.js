@@ -1,10 +1,11 @@
 const path = require('path');
 const webpack = require('webpack');
+const combineLoaders = require('webpack-combine-loaders');
 
 module.exports ={
   devtool : "source-map",
   entry : [
-    __dirname + '/app/index.js'
+    __dirname + '/src/index.js'
   ],
 
   output:{
@@ -23,7 +24,7 @@ module.exports ={
     ),
     new webpack.DefinePlugin({
       'process.env':{
-        "NODE_ENV":JSON.stingify("production")
+        "NODE_ENV":JSON.stringify("production")
       }
     })
   ],
