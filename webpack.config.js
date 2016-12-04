@@ -1,6 +1,6 @@
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 const HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
-    template:__dirname + "/app/index.html",
+    template:__dirname + "/src/index.html",
     filename: "index.html",
     inject:"body",
     title:"Quote Machinne",
@@ -40,6 +40,10 @@ module.exports = {
         filename: 'app.js',
         publicPath:"/",
         path: path.join(__dirname + '/build')
+    },
+
+    resolve: {
+      extensions: ['', '.js']
     },
 
     devServer: {
