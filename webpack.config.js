@@ -1,15 +1,16 @@
-var HTMLWebpackPlugin = require("html-webpack-plugin");
-var HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
+const HTMLWebpackPlugin = require("html-webpack-plugin");
+const HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
     template:__dirname + "/app/index.html",
     filename: "index.html",
     inject:"body",
     title:"Quote Machinne",
 });
 
-var combineLoaders = require('webpack-combine-loaders');
+const combineLoaders = require('webpack-combine-loaders');
+const path = require("path");
 
 module.exports = {
-    entry:__dirname + "/app/index.js",
+    entry:__dirname + "/src/index.js",
     module:{
         loaders:[
             {
@@ -24,7 +25,7 @@ module.exports = {
                         loader: 'style-loader'
                     },
                     {
-                        loader:'css-loader', 
+                        loader:'css-loader',
                         query:{
                             modules:true,
                             localIdentName: '[name]__local__[hash:base64:5]'
@@ -36,8 +37,13 @@ module.exports = {
     },
     output:{
         filename: 'app.js',
-        path: __dirname + '/build',
+        publicPath:"/",
+        path: path.join(__dirname + '/build')
     },
 
+    devServer: {
+      contentBase: './build',
+      hot: true
+    },
     plugins: [HTMLWebpackPluginConfig,],
 };
