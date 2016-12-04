@@ -8,6 +8,7 @@ const HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
 
 const combineLoaders = require('webpack-combine-loaders');
 const path = require("path");
+const webpack = require("webpack");
 
 module.exports = {
     entry:__dirname + "/src/index.js",
@@ -45,5 +46,11 @@ module.exports = {
       contentBase: './build',
       hot: true
     },
-    plugins: [HTMLWebpackPluginConfig,],
+
+    plugins: [
+      HTMLWebpackPluginConfig,
+      new webpack.optimize.OccurenceOrderPlugin(),
+      new webpack.HotModuleReplacementPlugin(),
+      new webpack.NoErrorsPlugin()
+    ],
 };
