@@ -4,7 +4,7 @@
   "private": true,
   "description": "Quote machine generating random quotes",
   "main": "index.js",
-  "author": "Brian Lusina <lusinabrian@gmail.com>",
+  "author": "Brian Lusina",
   "repository": {
     "type": "git",
     "url": "https://github.com/BrianLusina/Quote-Machine"
@@ -12,7 +12,10 @@
   "keywords": [
     "Quotes",
     "Random quotes",
-    "quote machine"
+    "quote machine",
+    "react quote machine",
+    "react",
+    "javascript"
   ],
   "license": "ISC",
   "devDependencies": {
@@ -20,6 +23,7 @@
     "babel-loader": "^6.2.8",
     "babel-preset-es2015": "^6.18.0",
     "babel-preset-react": "^6.16.0",
+    "babel-preset-react-hmre": "^1.1.1",
     "css-loader": "^0.26.0",
     "html-webpack-plugin": "^2.24.1",
     "jquery": "^3.1.1",
