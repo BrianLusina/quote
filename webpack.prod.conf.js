@@ -28,5 +28,28 @@ module.exports ={
     })
   ],
 
-  modules :
+  modules:{
+    loader:[
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader:'babel-loader',
+      },
+      {
+          test:/\.css$/,
+          loader:combineLoaders([
+              {
+                  loader: 'style-loader'
+              },
+              {
+                  loader:'css-loader',
+                  query:{
+                      modules:true,
+                      localIdentName: '[name]__local__[hash:base64:5]'
+                  }
+              }
+          ]),
+      },
+    ]
+  }
 }
