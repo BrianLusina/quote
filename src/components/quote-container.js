@@ -10,13 +10,13 @@ export default class QuoteContainer extends React.Component{
   render(){
     return (
       <div>
-        <div className={ this.props.styles.quoteText }>
+        <div>
             <i className="fa fa-quote-left"> </i>
-            <span id={ this.props.styles.quote }>{ this.props.quote }</span>
+            <span>{ this.props.quote }</span>
             <i className="fa fa-quote-right"></i>
         </div>
-        <div className={ this.props.styles.quoteAuthor }>
-        --<span id={ this.props.styles.author }>{ this.props.author }</span>
+        <div>
+        --<span>{ this.props.author }</span>
         </div>
       </div>
     )
