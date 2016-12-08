@@ -21,7 +21,7 @@ export default class App extends React.Component{
               <QuoteContainer author={ this.state.author } quote={ this.state.quote }/>
               <ShareQuote author={ this.state.author } quote={ this.state.quote }/>
             </div>
-            <div>
+            <div className="footer">
                 Made with <i className="fa fa-heart"></i> and <i className="fa fa-coffee"></i> by
             <a href="http://thelusina.netlify.com/">The Lusina</a>
             </div>
