@@ -61,7 +61,7 @@ export default class App extends React.Component{
           complete: (response, status) => {
           }
         });
-      }.bind(this), 30000);
+      }.bind(this), 15000);
     }
 }
 

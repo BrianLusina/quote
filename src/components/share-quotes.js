@@ -11,13 +11,21 @@ export default class ShareQuote extends React.Component {
   render() {
 
     var shareButtons = [
-      "fa fa-twitter fa-2x"];
+      "fa fa-twitter fa-2x",
+      "fa fa-facebook fa-2x",
+      "fa fa-google-plus fa-2x",
+      "fa fa-tumblr fa-2x"
+    ];
 
     var list = shareButtons.map((item, indx) => {
-      return <a key = {indx} className= {item} onClick = {this._handleButtonClick}></a>;
+      return (
+        <a key = {indx} className="socialButton" onClick = {this._handleButtonClick}>
+          <i className={item}></i>
+        </a>
+      );
     });
     return (
-      <div>
+      <div className="quoteButtons">
         {list}
       </div>)
     }
