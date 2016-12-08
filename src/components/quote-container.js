@@ -19,7 +19,7 @@ export default class QuoteContainer extends React.Component{
         <div className="quoteAuthor">
         --<span >{ this.props.author }</span>
         </div>
-        <ShareQuote author={ this.state.author } quote={ this.state.quote }/>
+        <ShareQuote author={ this.props.author } quote={ this.props.quote }/>
       </div>
     )
   }
