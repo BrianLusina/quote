@@ -1,6 +1,5 @@
 import React from 'react';
 import QuoteContainer from './quote-container';
-import ShareQuote from './share-quotes';
 import jQuery from 'jquery';
 
 export default class App extends React.Component{
@@ -17,10 +16,7 @@ export default class App extends React.Component{
   render(){
       return(
           <div>
-            <div>
-              <QuoteContainer author={ this.state.author } quote={ this.state.quote }/>
-              <ShareQuote author={ this.state.author } quote={ this.state.quote }/>
-            </div>
+            <QuoteContainer author={ this.state.author } quote={ this.state.quote }/>
             <div className="footer">
                 Made with <i className="fa fa-heart"></i> and <i className="fa fa-coffee"></i> by
             <a href="http://thelusina.netlify.com/">The Lusina</a>
@@ -72,7 +68,7 @@ export default class App extends React.Component{
           complete: (response, status) => {
           }
         });
-      }.bind(this), 15000);
+      }.bind(this), 10000);
     }
 }
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import jQuery from 'jquery';
+import ShareQuote from './share-quotes';
 
 export default class QuoteContainer extends React.Component{
 
@@ -18,6 +19,7 @@ export default class QuoteContainer extends React.Component{
         <div className="quoteAuthor">
         --<span >{ this.props.author }</span>
         </div>
+        <ShareQuote author={ this.state.author } quote={ this.state.quote }/>
       </div>
     )
   }

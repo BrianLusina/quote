@@ -27,7 +27,8 @@ export default class ShareQuote extends React.Component {
     return (
       <div className="quoteButtons">
         {list}
-      </div>)
+      </div>
+    )
     }
 
   _openUrl(url) {
