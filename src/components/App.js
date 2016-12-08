@@ -39,6 +39,9 @@ export default class App extends React.Component{
     This updates the states of these components which can be passed on to the quote container
     */
     _fetchQuotes(){
+      var colors = ['#16a085', '#27ae60', '#2c3e50', '#f39c12', '#e74c3c',
+      '#9b59b6', '#FB6964', '#342224', "#472E32", "#BDBB99", "#77B1A9", "#73A857"];
+
       setInterval(function () {
         jQuery.ajax({
           method:"GET",
@@ -53,6 +56,14 @@ export default class App extends React.Component{
             let author = json["author"];
             let quote = json['quote'];
             this.setState({author, quote});
+
+            //change background colors
+            var color = Math.floor(Math.random() * colors.length);
+            jQuery("html body").animate({
+              backgroundColor: colors[color],
+              color: colors[color]
+            }, 1000);
+
           },
           error:(request, errorType, errorMessage) => {
             console.error(errorType, errorMessage);
