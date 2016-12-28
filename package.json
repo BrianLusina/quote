@@ -46,9 +46,14 @@
     "react": "^15.4.0",
     "react-dom": "^15.4.0"
   },
+  "homepage": "https://brianlusina.github.io/Quote-Machine",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "NODE_ENV=production webpack --config ./webpack.prod.config.js --progress --colors",
-    "start": "node app.js"
+    "build-prod": "NODE_ENV=production webpack --config ./webpack.prod.config.js --progress --colors",
+    "start-prod": "node app.js",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "deploy": "npm run build&&gh-pages -d build"
   }
 }
