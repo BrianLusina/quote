@@ -4,12 +4,12 @@
   "private": true,
   "main": "index.js",
   "author": "Brian Lusina",
-  "description": "Quote machine generating random quotes",  
+  "description": "Quote machine generating random quotes",
   "repository": {
     "type": "git",
     "url": "https://github.com/BrianLusina/Quote-Machine"
   },
-  "homepage": "https://brianlusina.github.io/Quote-Machine", 
+  "homepage": "https://brianlusina.github.io/Quote-Machine",
   "keywords": [
     "Quotes",
     "Random quotes",
@@ -53,6 +53,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "deploy": "npm run build&&gh-pages -d build"    
+    "deploy": "npm run build&&gh-pages -d build"
   }
 }
