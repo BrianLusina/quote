@@ -1,14 +1,15 @@
 {
   "name": "quote-machine",
-  "version": "0.1.1dev",
+  "version": "0.2.0",
   "private": true,
-  "description": "Quote machine generating random quotes",
   "main": "index.js",
   "author": "Brian Lusina",
+  "description": "Quote machine generating random quotes",  
   "repository": {
     "type": "git",
     "url": "https://github.com/BrianLusina/Quote-Machine"
   },
+  "homepage": "https://brianlusina.github.io/Quote-Machine", 
   "keywords": [
     "Quotes",
     "Random quotes",
@@ -44,16 +45,14 @@
     "webpack-hot-middleware": "^2.13.2"
   },
   "dependencies": {
-    "express": "^4.14.0",
-    "react": "^15.4.0",
-    "react-dom": "^15.4.0"
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1"
   },
-  "homepage": "https://brianlusina.github.io/Quote-Machine",
   "scripts": {
-    "build": "NODE_ENV=production webpack --config ./webpack.prod.config.js --progress --colors",
-    "start": "node app.js",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "deploy": "npm run build&&gh-pages -d build"
+    "deploy": "npm run build&&gh-pages -d build"    
   }
 }
