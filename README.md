@@ -1,5 +1,7 @@
 ## Random Quote Machine
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/20a0e6d4a5804742bf7b1ed90200cc9f)](https://www.codacy.com/app/BrianLusina/Quote-Machine?utm_source=github.com&utm_medium=referral&utm_content=BrianLusina/Quote-Machine&utm_campaign=badger)
+
 Random Quote machine build on ReactJS library. Displays Random quotes every 10 seconds.
 User can share the quote on Twitter and other social media platforms.
 
