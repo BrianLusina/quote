@@ -1,0 +1,162 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.14.1
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:debug:20170905':
+    - webpack-dev-server > compression > debug:
+        patched: '2020-04-21T02:16:54.443Z'
+    - webpack-dev-server > serve-index > debug:
+        patched: '2020-04-21T02:16:54.443Z'
+    - react-scripts > webpack-dev-server > compression > debug:
+        patched: '2020-04-21T02:16:54.443Z'
+    - react-scripts > webpack-dev-server > serve-index > debug:
+        patched: '2020-04-21T02:16:54.443Z'
+    - react-scripts > fsevents > node-pre-gyp > tar-pack > debug:
+        patched: '2020-04-21T02:16:54.443Z'
+    - babel-cli > chokidar > fsevents > node-pre-gyp > tar-pack > debug:
+        patched: '2020-04-21T02:16:54.443Z'
+    - webpack > watchpack > chokidar > fsevents > node-pre-gyp > tar-pack > debug:
+        patched: '2020-04-21T02:16:54.443Z'
+    - react-scripts > webpack > watchpack > chokidar > fsevents > node-pre-gyp > tar-pack > debug:
+        patched: '2020-04-21T02:16:54.443Z'
+  'npm:extend:20180424':
+    - react-scripts > fsevents > node-pre-gyp > request > extend:
+        patched: '2020-04-21T02:16:54.443Z'
+    - babel-cli > chokidar > fsevents > node-pre-gyp > request > extend:
+        patched: '2020-04-21T02:16:54.443Z'
+    - webpack > watchpack > chokidar > fsevents > node-pre-gyp > request > extend:
+        patched: '2020-04-21T02:16:54.443Z'
+    - react-scripts > jest > jest-cli > jest-environment-jsdom > jsdom > request > extend:
+        patched: '2020-04-21T02:16:54.443Z'
+    - react-scripts > webpack > watchpack > chokidar > fsevents > node-pre-gyp > request > extend:
+        patched: '2020-04-21T02:16:54.443Z'
+    - react-scripts > jest > jest-cli > jest-config > jest-environment-jsdom > jsdom > request > extend:
+        patched: '2020-04-21T02:16:54.443Z'
+    - react-scripts > jest > jest-cli > jest-runtime > jest-config > jest-environment-jsdom > jsdom > request > extend:
+        patched: '2020-04-21T02:16:54.443Z'
+  'npm:hoek:20180212':
+    - react-scripts > fsevents > node-pre-gyp > request > hawk > hoek:
+        patched: '2020-04-21T02:16:54.443Z'
+    - react-scripts > fsevents > node-pre-gyp > request > hawk > boom > hoek:
+        patched: '2020-04-21T02:16:54.443Z'
+    - react-scripts > fsevents > node-pre-gyp > request > hawk > sntp > hoek:
+        patched: '2020-04-21T02:16:54.443Z'
+    - babel-cli > chokidar > fsevents > node-pre-gyp > request > hawk > hoek:
+        patched: '2020-04-21T02:16:54.443Z'
+    - react-scripts > fsevents > node-pre-gyp > request > hawk > cryptiles > boom > hoek:
+        patched: '2020-04-21T02:16:54.443Z'
+    - babel-cli > chokidar > fsevents > node-pre-gyp > request > hawk > boom > hoek:
+        patched: '2020-04-21T02:16:54.443Z'
+    - babel-cli > chokidar > fsevents > node-pre-gyp > request > hawk > sntp > hoek:
+        patched: '2020-04-21T02:16:54.443Z'
+    - webpack > watchpack > chokidar > fsevents > node-pre-gyp > request > hawk > hoek:
+        patched: '2020-04-21T02:16:54.443Z'
+    - react-scripts > jest > jest-cli > jest-environment-jsdom > jsdom > request > hawk > hoek:
+        patched: '2020-04-21T02:16:54.443Z'
+    - babel-cli > chokidar > fsevents > node-pre-gyp > request > hawk > cryptiles > boom > hoek:
+        patched: '2020-04-21T02:16:54.443Z'
+    - webpack > watchpack > chokidar > fsevents > node-pre-gyp > request > hawk > boom > hoek:
+        patched: '2020-04-21T02:16:54.443Z'
+    - react-scripts > jest > jest-cli > jest-environment-jsdom > jsdom > request > hawk > boom > hoek:
+        patched: '2020-04-21T02:16:54.443Z'
+    - webpack > watchpack > chokidar > fsevents > node-pre-gyp > request > hawk > sntp > hoek:
+        patched: '2020-04-21T02:16:54.443Z'
+    - react-scripts > jest > jest-cli > jest-environment-jsdom > jsdom > request > hawk > sntp > hoek:
+        patched: '2020-04-21T02:16:54.443Z'
+    - react-scripts > webpack > watchpack > chokidar > fsevents > node-pre-gyp > request > hawk > hoek:
+        patched: '2020-04-21T02:16:54.443Z'
+    - react-scripts > jest > jest-cli > jest-config > jest-environment-jsdom > jsdom > request > hawk > hoek:
+        patched: '2020-04-21T02:16:54.443Z'
+    - webpack > watchpack > chokidar > fsevents > node-pre-gyp > request > hawk > cryptiles > boom > hoek:
+        patched: '2020-04-21T02:16:54.443Z'
+    - react-scripts > jest > jest-cli > jest-environment-jsdom > jsdom > request > hawk > cryptiles > boom > hoek:
+        patched: '2020-04-21T02:16:54.443Z'
+    - react-scripts > webpack > watchpack > chokidar > fsevents > node-pre-gyp > request > hawk > boom > hoek:
+        patched: '2020-04-21T02:16:54.443Z'
+    - react-scripts > jest > jest-cli > jest-config > jest-environment-jsdom > jsdom > request > hawk > boom > hoek:
+        patched: '2020-04-21T02:16:54.443Z'
+    - react-scripts > webpack > watchpack > chokidar > fsevents > node-pre-gyp > request > hawk > sntp > hoek:
+        patched: '2020-04-21T02:16:54.443Z'
+    - react-scripts > jest > jest-cli > jest-config > jest-environment-jsdom > jsdom > request > hawk > sntp > hoek:
+        patched: '2020-04-21T02:16:54.443Z'
+    - react-scripts > jest > jest-cli > jest-runtime > jest-config > jest-environment-jsdom > jsdom > request > hawk > hoek:
+        patched: '2020-04-21T02:16:54.443Z'
+    - react-scripts > webpack > watchpack > chokidar > fsevents > node-pre-gyp > request > hawk > cryptiles > boom > hoek:
+        patched: '2020-04-21T02:16:54.443Z'
+    - react-scripts > jest > jest-cli > jest-config > jest-environment-jsdom > jsdom > request > hawk > cryptiles > boom > hoek:
+        patched: '2020-04-21T02:16:54.443Z'
+    - react-scripts > jest > jest-cli > jest-runtime > jest-config > jest-environment-jsdom > jsdom > request > hawk > boom > hoek:
+        patched: '2020-04-21T02:16:54.443Z'
+    - react-scripts > jest > jest-cli > jest-runtime > jest-config > jest-environment-jsdom > jsdom > request > hawk > sntp > hoek:
+        patched: '2020-04-21T02:16:54.443Z'
+    - react-scripts > jest > jest-cli > jest-runtime > jest-config > jest-environment-jsdom > jsdom > request > hawk > cryptiles > boom > hoek:
+        patched: '2020-04-21T02:16:54.443Z'
+  'npm:ms:20170412':
+    - webpack-dev-server > compression > debug > ms:
+        patched: '2020-04-21T02:16:54.443Z'
+    - webpack-dev-server > serve-index > debug > ms:
+        patched: '2020-04-21T02:16:54.443Z'
+    - react-scripts > webpack-dev-server > compression > debug > ms:
+        patched: '2020-04-21T02:16:54.443Z'
+    - react-scripts > webpack-dev-server > serve-index > debug > ms:
+        patched: '2020-04-21T02:16:54.443Z'
+    - react-scripts > fsevents > node-pre-gyp > tar-pack > debug > ms:
+        patched: '2020-04-21T02:16:54.443Z'
+    - babel-cli > chokidar > fsevents > node-pre-gyp > tar-pack > debug > ms:
+        patched: '2020-04-21T02:16:54.443Z'
+    - webpack > watchpack > chokidar > fsevents > node-pre-gyp > tar-pack > debug > ms:
+        patched: '2020-04-21T02:16:54.443Z'
+    - react-scripts > webpack > watchpack > chokidar > fsevents > node-pre-gyp > tar-pack > debug > ms:
+        patched: '2020-04-21T02:16:54.443Z'
+  'npm:qs:20170213':
+    - react-scripts > fsevents > node-pre-gyp > request > qs:
+        patched: '2020-04-21T02:16:54.443Z'
+    - babel-cli > chokidar > fsevents > node-pre-gyp > request > qs:
+        patched: '2020-04-21T02:16:54.443Z'
+    - webpack > watchpack > chokidar > fsevents > node-pre-gyp > request > qs:
+        patched: '2020-04-21T02:16:54.443Z'
+    - react-scripts > jest > jest-cli > jest-environment-jsdom > jsdom > request > qs:
+        patched: '2020-04-21T02:16:54.443Z'
+    - react-scripts > webpack > watchpack > chokidar > fsevents > node-pre-gyp > request > qs:
+        patched: '2020-04-21T02:16:54.443Z'
+    - react-scripts > jest > jest-cli > jest-config > jest-environment-jsdom > jsdom > request > qs:
+        patched: '2020-04-21T02:16:54.443Z'
+    - react-scripts > jest > jest-cli > jest-runtime > jest-config > jest-environment-jsdom > jsdom > request > qs:
+        patched: '2020-04-21T02:16:54.443Z'
+  'npm:tough-cookie:20170905':
+    - react-scripts > fsevents > node-pre-gyp > request > tough-cookie:
+        patched: '2020-04-21T02:16:54.443Z'
+    - babel-cli > chokidar > fsevents > node-pre-gyp > request > tough-cookie:
+        patched: '2020-04-21T02:16:54.443Z'
+    - react-scripts > jest > jest-cli > jest-environment-jsdom > jsdom > tough-cookie:
+        patched: '2020-04-21T02:16:54.443Z'
+    - webpack > watchpack > chokidar > fsevents > node-pre-gyp > request > tough-cookie:
+        patched: '2020-04-21T02:16:54.443Z'
+    - react-scripts > jest > jest-cli > jest-environment-jsdom > jsdom > request > tough-cookie:
+        patched: '2020-04-21T02:16:54.443Z'
+    - react-scripts > jest > jest-cli > jest-config > jest-environment-jsdom > jsdom > tough-cookie:
+        patched: '2020-04-21T02:16:54.443Z'
+    - react-scripts > webpack > watchpack > chokidar > fsevents > node-pre-gyp > request > tough-cookie:
+        patched: '2020-04-21T02:16:54.443Z'
+    - react-scripts > jest > jest-cli > jest-config > jest-environment-jsdom > jsdom > request > tough-cookie:
+        patched: '2020-04-21T02:16:54.443Z'
+    - react-scripts > jest > jest-cli > jest-runtime > jest-config > jest-environment-jsdom > jsdom > tough-cookie:
+        patched: '2020-04-21T02:16:54.443Z'
+    - react-scripts > jest > jest-cli > jest-runtime > jest-config > jest-environment-jsdom > jsdom > request > tough-cookie:
+        patched: '2020-04-21T02:16:54.443Z'
+  'npm:tunnel-agent:20170305':
+    - react-scripts > fsevents > node-pre-gyp > request > tunnel-agent:
+        patched: '2020-04-21T02:16:54.443Z'
+    - babel-cli > chokidar > fsevents > node-pre-gyp > request > tunnel-agent:
+        patched: '2020-04-21T02:16:54.443Z'
+    - webpack > watchpack > chokidar > fsevents > node-pre-gyp > request > tunnel-agent:
+        patched: '2020-04-21T02:16:54.443Z'
+    - react-scripts > jest > jest-cli > jest-environment-jsdom > jsdom > request > tunnel-agent:
+        patched: '2020-04-21T02:16:54.443Z'
+    - react-scripts > webpack > watchpack > chokidar > fsevents > node-pre-gyp > request > tunnel-agent:
+        patched: '2020-04-21T02:16:54.443Z'
+    - react-scripts > jest > jest-cli > jest-config > jest-environment-jsdom > jsdom > request > tunnel-agent:
+        patched: '2020-04-21T02:16:54.443Z'
+    - react-scripts > jest > jest-cli > jest-runtime > jest-config > jest-environment-jsdom > jsdom > request > tunnel-agent:
+        patched: '2020-04-21T02:16:54.443Z'
