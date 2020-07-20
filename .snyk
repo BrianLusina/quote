@@ -1,8 +1,28 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.14.1
+version: v1.16.0
 ignore: {}
 # patches apply the minimum changes required to fix a vulnerability
 patch:
   SNYK-JS-LODASH-567746:
     - webpack-dev-server > portfinder > async > lodash:
         patched: '2020-05-11T08:23:32.332Z'
+    - react-scripts > react-dev-utils > inquirer > lodash:
+        patched: '2020-07-20T04:50:20.292Z'
+    - react-scripts > extract-text-webpack-plugin > async > lodash:
+        patched: '2020-07-20T04:50:20.292Z'
+    - react-scripts > webpack > async > lodash:
+        patched: '2020-07-20T04:50:20.292Z'
+    - react-scripts > babel-preset-react-app > babel-plugin-dynamic-import-node > babel-types > lodash:
+        patched: '2020-07-20T04:50:20.292Z'
+    - react-scripts > babel-preset-react-app > babel-plugin-dynamic-import-node > babel-template > lodash:
+        patched: '2020-07-20T04:50:20.292Z'
+    - react-scripts > webpack-dev-server > portfinder > async > lodash:
+        patched: '2020-07-20T04:50:20.292Z'
+    - react-scripts > babel-preset-react-app > babel-plugin-dynamic-import-node > babel-template > babel-types > lodash:
+        patched: '2020-07-20T04:50:20.292Z'
+    - react-scripts > babel-preset-react-app > babel-plugin-dynamic-import-node > babel-template > babel-traverse > lodash:
+        patched: '2020-07-20T04:50:20.292Z'
+    - react-scripts > babel-preset-react-app > babel-plugin-dynamic-import-node > babel-template > babel-traverse > babel-types > lodash:
+        patched: '2020-07-20T04:50:20.292Z'
+    - react-scripts > babel-preset-react-app > babel-preset-env > babel-plugin-transform-regenerator > regenerator-transform > babel-types > lodash:
+        patched: '2020-07-20T04:50:20.292Z'
