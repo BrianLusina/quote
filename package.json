@@ -37,7 +37,7 @@
     "sass-loader": "^4.0.2",
     "style-loader": "^0.23.1",
     "url-loader": "^1.0.0",
-    "webpack": "^1.13.3",
+    "webpack": "^5.67.0",
     "webpack-combine-loaders": "^2.0.3",
     "webpack-dev-middleware": "^1.8.4",
     "webpack-dev-server": "^4.7.3",
