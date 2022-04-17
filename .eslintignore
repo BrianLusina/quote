@@ -1,0 +1,12 @@
+node_modules/
+coverage/
+config/
+build/
+public/
+.eslintrc.js
+.pretterrc.js
+server/
+*.d.ts
+scripts/
+config/
+jest.config.js
