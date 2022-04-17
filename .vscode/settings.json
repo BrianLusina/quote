@@ -1,0 +1,5 @@
+{
+    "yaml.schemas": {
+        "https://json.schemastore.org/github-action.json": "file:///home/lusinabrian/Projects/brianlusina/quote/.github/workflows/build.yml"
+    }
+}
