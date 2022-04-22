@@ -51,9 +51,9 @@ i{
 }
 
 .quoteButtons {
-    width:450px;
-    margin:auto;
-    display:block;
+    width: 100%;
+    margin: auto;
+    display: flex;
   }
 
 .button {
