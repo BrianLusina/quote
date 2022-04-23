@@ -2,11 +2,13 @@ import Quote from '@components/quote';
 import ShareQuote from '@components/share';
 import config from '@config';
 import useFetchQuote from '@hooks/useFetchQuote';
+import usePageViews from '@hooks/usePageViews';
 
 function App() {
+  usePageViews();
   const { quote, author } = useFetchQuote(10000);
 
-  // //change background colors
+  //change background colors
   // const color = Math.floor(Math.random() * colors.length);
   // jQuery('html body').animate(
   //   {

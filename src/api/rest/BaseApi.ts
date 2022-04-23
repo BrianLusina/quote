@@ -1,6 +1,7 @@
-import axios, { AxiosRequestConfig, AxiosResponse } from 'axios';
+import { AxiosRequestConfig, AxiosResponse } from 'axios';
 import { camelCaseObjectKeys, snakeCaseObjectKeys } from '@utils';
 import RestClient from './RestClient';
+import { captureException } from '@services/monitoring';
 
 abstract class BaseApi {
   readonly restClient: RestClient;
@@ -52,19 +53,7 @@ abstract class BaseApi {
   };
 
   protected handleError = (err: Error): Promise<Error> => {
-    if (axios.isAxiosError(err)) {
-      const { response } = err;
-      if (response) {
-        const { statusText, data } = response;
-
-        let errorMessage = statusText;
-        if (data) {
-          const { error: dataError = 'Failed Request' } = data;
-          errorMessage = dataError;
-        }
-      }
-    }
-
+    captureException(err);
     return Promise.reject(err);
   };
 }
