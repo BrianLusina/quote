@@ -1,6 +1,7 @@
 export default {
     api: {
-        token: process.env.TOKEN,
-        restUrl: process.env.REST_API_URL || '',
+        username: process.env.API_USERNAME,
+        password: process.env.API_PASSWORD,
+        restUrl: process.env.REST_API_URL || '/api/v1/quotes',
     }
 };

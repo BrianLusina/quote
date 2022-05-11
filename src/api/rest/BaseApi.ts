@@ -1,7 +1,12 @@
 import { AxiosRequestConfig, AxiosResponse } from 'axios';
 import { camelCaseObjectKeys, snakeCaseObjectKeys } from '@utils';
-import RestClient from './RestClient';
 import { captureException } from '@services/monitoring';
+import RestClient from './RestClient';
+import config from '@apiConfig';
+
+const {
+  api: { username, password },
+} = config;
 
 abstract class BaseApi {
   readonly restClient: RestClient;
@@ -25,12 +30,25 @@ abstract class BaseApi {
   };
 
   protected handleRequest = (axiosConfig: AxiosRequestConfig): AxiosRequestConfig => {
-    const { data } = axiosConfig;
+    const { data, auth } = axiosConfig;
+
+    if (axiosConfig.method === 'OPTIONS') {
+      if (auth) {
+        auth.username = username;
+        auth.password = password;
+      }
+    }
+
+    if (auth) {
+      auth.username = username;
+      auth.password = password;
+    }
 
     const transformedData = snakeCaseObjectKeys(data);
 
     return {
       ...axiosConfig,
+      auth,
       data: transformedData,
     };
   };
