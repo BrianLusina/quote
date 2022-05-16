@@ -1,0 +1,79 @@
+import { AxiosRequestConfig, AxiosResponse } from 'axios';
+import { camelCaseObjectKeys, snakeCaseObjectKeys } from '@utils';
+import { captureException } from '@services/monitoring';
+import RestClient from './RestClient';
+import config from '@apiConfig';
+
+const {
+  api: { username, password },
+} = config;
+
+abstract class BaseApi {
+  readonly restClient: RestClient;
+
+  public constructor(restClient?: RestClient) {
+    if (restClient) {
+      this.restClient = restClient;
+    }
+    this.restClient = new RestClient();
+
+    this.initializeResponseInterceptor();
+    this.initializeRequestInterceptor();
+  }
+
+  protected initializeResponseInterceptor = (): void => {
+    this.restClient.axiosInstance.interceptors.response.use(this.handleResponse, this.handleError);
+  };
+
+  protected initializeRequestInterceptor = (): void => {
+    this.restClient.axiosInstance.interceptors.request.use(this.handleRequest, this.handleError);
+  };
+
+  protected handleRequest = (axiosConfig: AxiosRequestConfig): AxiosRequestConfig => {
+    const { data, auth } = axiosConfig;
+
+    if (axiosConfig.method === 'OPTIONS') {
+      if (auth) {
+        auth.username = username;
+        auth.password = password;
+      }
+    }
+
+    if (auth) {
+      auth.username = username;
+      auth.password = password;
+    }
+
+    const transformedData = snakeCaseObjectKeys(data);
+
+    return {
+      ...axiosConfig,
+      auth,
+      data: transformedData,
+    };
+  };
+
+  protected handleResponse = (response: AxiosResponse): AxiosResponse => {
+    const { data } = response;
+
+    let transformedData;
+
+    if (Array.isArray(data)) {
+      transformedData = data.map((item) => camelCaseObjectKeys(item));
+    } else {
+      transformedData = camelCaseObjectKeys(data);
+    }
+
+    return {
+      ...response,
+      data: transformedData,
+    };
+  };
+
+  protected handleError = (err: Error): Promise<Error> => {
+    captureException(err);
+    return Promise.reject(err);
+  };
+}
+
+export default BaseApi;
