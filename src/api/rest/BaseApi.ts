@@ -30,25 +30,16 @@ abstract class BaseApi {
   };
 
   protected handleRequest = (axiosConfig: AxiosRequestConfig): AxiosRequestConfig => {
-    const { data, auth } = axiosConfig;
-
-    if (axiosConfig.method === 'OPTIONS') {
-      if (auth) {
-        auth.username = username;
-        auth.password = password;
-      }
-    }
-
-    if (auth) {
-      auth.username = username;
-      auth.password = password;
-    }
+    const { data } = axiosConfig;
 
     const transformedData = snakeCaseObjectKeys(data);
 
     return {
       ...axiosConfig,
-      auth,
+      auth: {
+        username,
+        password,
+      },
       data: transformedData,
     };
   };
