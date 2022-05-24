@@ -10,3 +10,4 @@ server/
 scripts/
 config/
 jest.config.js
+src/setupProxy.js

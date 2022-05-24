@@ -1,18 +1,23 @@
 name: Tests
 
 on:
-  push:
-    branches:
-      - '**'
+  workflow_run:
+    workflows:
+      - "Lint"
+    brances:
+      - "**"
+    types:
+      - completed
 
 jobs:
   test:
     name: Unit Tests
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
 
     strategy:
       fail-fast: false
       matrix:
-        os: [macos-latest, ubuntu-latest]
+        os: [ubuntu-latest]
         node-version: [16.x]
 
     runs-on: ${{ matrix.os }}
