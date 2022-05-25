@@ -1,36 +1,40 @@
-## Random Quote Machine
+# Random Quotes
 
+[![License](https://img.shields.io/github/license/brianlusina/quote)](https://github.com/brianlusina/quote/blob/main/LICENSE)
+[![Version](https://img.shields.io/github/v/release/brianlusina/quote?color=%235351FB&label=version)](https://github.com/brianlusina/quote/releases)
+[![Tests](https://github.com/BrianLusina/quote/actions/workflows/tests.yml/badge.svg)](https://github.com/BrianLusina/quote/actions/workflows/tests.yml)
+[![Lint](https://github.com/BrianLusina/quote/actions/workflows/lint.yml/badge.svg)](https://github.com/BrianLusina/quote/actions/workflows/lint.yml)
+[![Build](https://github.com/BrianLusina/quote/actions/workflows/build_app.yml/badge.svg)](https://github.com/BrianLusina/quote/actions/workflows/build_app.yml)
+[![codecov](https://codecov.io/gh/BrianLusina/quote/branch/main/graph/badge.svg?token=RNg0UoESug)](https://codecov.io/gh/BrianLusina/quote)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/20a0e6d4a5804742bf7b1ed90200cc9f)](https://www.codacy.com/app/BrianLusina/Quote-Machine?utm_source=github.com&utm_medium=referral&utm_content=BrianLusina/Quote-Machine&utm_campaign=badger)
+[![Node](https://img.shields.io/badge/Node-16-green.svg)](https://nodejs.org/en/)
+[![React](https://img.shields.io/badge/React-18-blue.svg)](https://reactjs.org/)
 
-Random Quote machine build on ReactJS library. Displays Random quotes every 10 seconds.
-User can share the quote on Twitter and other social media platforms.
+Random Quote machine build on ReactJS library. Displays Random quotes every 10 seconds. This is the companion client for the quote api that can be found [here](https://github.com/BrianLusina/quote-api). Set the API up first and then run the client.
 
-2 versions for this app exist. One built entirely in ReactJS, the other entirely in jQuery. There are significant differences, but the functionality remains; generate random quotes.
-
-You can find them here:
-
-1. [ReactJS version](https://quotemachina.herokuapp.com/)
-2. [jQuery Version](http://codepen.io/thelusina/full/wWwWZb/)
+You can find the jQuery version [here](http://codepen.io/thelusina/full/wWwWZb/)
 
 Simply clone the repo
+
 ``` sh
-$ git clone https://github.com/BrianLusina/Quote-Machine.git
+git clone https://github.com/BrianLusina/quote.git
 ```
 
 Install the dependencies:
 
 ``` sh
-$ npm install
+npm install
+
+# or with yarn
+yarn install
 ```
 
-That is it. Enjoy!
+Setup the env:
 
-# Licence
+``` sh
+cp .env.sample .env
+```
 
-Copyright (c) 2016 by Brian Lusina
+Once you have the env file setup, you can run the api server as instructed [here](https://github.com/BrianLusina/quote-api)
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+You will have to create a few quotes on the API backend before you can run the client.
