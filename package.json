@@ -112,8 +112,8 @@
     "pre-commit": "lint-staged",
     "postinstall": "husky install",
     "lint": "eslint --ext .jsx,.tsx,.js,.ts src/",
-    "lint:styles": "stylelint './src/**/*.{js,jsx,ts,tsx,scss,sass}'",
-    "lint:styles:fix": "stylelint 'src/**/*.{js,jsx,ts,tsx,scss,sass}' --fix",
+    "lint:styles": "stylelint './src/**/*.{scss,sass}'",
+    "lint:styles:fix": "stylelint 'src/**/*.{scss,sass}' --fix",
     "lint:fix": "eslint --ext .jsx,.tsx,.js,.ts src/ --fix"
   },
   "browserslist": {
