@@ -44,6 +44,3 @@ jobs:
 
     - name: Lint Code
       run: yarn lint
-
-    - name: Lint Styles
-      run: yarn lint:styles
