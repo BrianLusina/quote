@@ -4,4 +4,4 @@
 # to avoid running in CI servers
 [ -n "$CI" ] && exit 0
 
-npm lint
+npm run lint
