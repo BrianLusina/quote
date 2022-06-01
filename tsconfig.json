@@ -27,6 +27,7 @@
         "@routes": ["config/routes.ts"],
         "@graphQl/*": ["api/graphql/*"],
         "@graphQlClient": ["api/graphql/GraphqlClient.ts"],
+        "@quoteClient": ["api/rest/quoteClient/index.ts"],
         "@providers/*": ["providers/*"],
         "@components/*": ["components/*"],
         "@containers/*": ["containers/*"],
@@ -41,7 +42,8 @@
         "@styles/*": ["styles/*"],
         "@styled/*": ["styles/ts/*"],
         "@scss/*": ["styles/scss/*"],
-        "@css/*": ["styles/css/*"]
+        "@css/*": ["styles/css/*"],
+        "@constants": ["constants.ts"],
       }
     },
     "exclude": [

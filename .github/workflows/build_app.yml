@@ -1,19 +1,22 @@
 name: Build
 
-on: 
-  push:
-    branches:
-      - '**'
+on:
+  workflow_run:
+    workflows:
+      - "Tests"
+    types:
+      - completed
 
 jobs:
   build:
     name: Bundle Application
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
 
     strategy:
       fail-fast: false
       matrix:
-        os: [macos-latest, ubuntu-latest]
-        node-version: [14.x, 16.x]
+        os: [ubuntu-latest]
+        node-version: [16.x]
 
     runs-on: ${{ matrix.os }}
 

@@ -9,7 +9,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [macos-latest, ubuntu-latest]
+        os: [ubuntu-latest]
         node-version: [16.x]
 
     runs-on: ${{ matrix.os }}
@@ -44,6 +44,3 @@ jobs:
 
     - name: Lint Code
       run: yarn lint
-
-    - name: Lint Styles
-      run: yarn lint:styles

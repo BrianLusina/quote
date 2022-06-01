@@ -12,7 +12,7 @@ module.exports = {
     window: true,
   },
   extends: [
-    'airbnb',
+    // 'airbnb',
     'react-app',
     'react-app/jest',
     'eslint:recommended',
@@ -43,7 +43,8 @@ module.exports = {
   rules: {
     strict: 0,
     'no-use-before-define': 'off',
-    // '@typescript-eslint/no-unused-vars': 0,
+    'no-shadow': 'off',
+    '@typescript-eslint/no-shadow': ['error'],
     '@typescript-eslint/no-use-before-define': ['error'],
     'import/no-named-as-default': 0,
     'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
@@ -131,6 +132,13 @@ module.exports = {
       {
         forbidDefaultForRequired: true,
         ignoreFunctionalComponents: true,
+      },
+    ],
+    'react/function-component-definition': [
+      2,
+      {
+        namedComponents: 'function-declaration',
+        unnamedComponents: 'function-expression',
       },
     ],
   },
