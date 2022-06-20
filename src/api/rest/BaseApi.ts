@@ -1,6 +1,7 @@
 import { AxiosRequestConfig, AxiosResponse } from 'axios';
 import { camelCaseObjectKeys, snakeCaseObjectKeys } from '@utils';
-import { captureException } from '@services/monitoring';
+import { captureException, captureScope } from '@services/monitoring';
+import { Severity } from '@sentry/react';
 import RestClient from './RestClient';
 import config from '@apiConfig';
 
@@ -62,7 +63,16 @@ abstract class BaseApi {
   };
 
   protected handleError = (err: Error): Promise<Error> => {
-    captureException(err);
+    const scope = captureScope(
+      {
+        type: 'API Error',
+        message: err.message,
+        timestamp: Date.now(),
+        category: 'API',
+      },
+      Severity.Error,
+    );
+    captureException(err, scope, err.message);
     return Promise.reject(err);
   };
 }

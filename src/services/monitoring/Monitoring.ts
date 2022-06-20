@@ -44,5 +44,3 @@ export const captureException = (
 export const captureScope = (data: SentryBreadcrumb, level: SentryLevels): SentryScope => {
   return captureSentryScope(data, level);
 };
-
-export type Levels = SentryLevels;
