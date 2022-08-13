@@ -8,7 +8,7 @@ type ShareQuoteProps = {
 
 const ShareQuote: FC<ShareQuoteProps> = ({ author, quote }) => {
   const tweetUrl = 'https://twitter.com/intent/tweet?hashtags=quotes&via=brianlusina&text=';
-  const shareButtons = ['fa fa-twitter fa-2x', 'fa fa-facebook fa-2x', 'fa fa-tumblr fa-2x'];
+  const shareButtons = ['fa fa-twitter fa-2x'];
 
   const openUrl = (url: string) => {
     window.open(
@@ -35,13 +35,6 @@ const ShareQuote: FC<ShareQuoteProps> = ({ author, quote }) => {
       if (inIframe()) {
         openUrl(tweetUrl + encodeURIComponent('"' + quote + '" ' + author));
       }
-    }
-    //facebook
-    else if (element.contains('fa-facebook')) {
-      // facebookUrl +
-      //   encodeURIComponent(author) +
-      //   '&content=' +
-      //   encodeURIComponent(quote);
     }
   };
 

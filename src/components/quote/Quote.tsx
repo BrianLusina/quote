@@ -15,7 +15,7 @@ const Quote: FC<QuoteProps> = ({ author, quote }: QuoteProps) => {
         <i className="fa fa-quote-right"></i>
       </div>
       <div className="quoteAuthor">
-        --<span>{author}</span>
+        ~ <span>{author}</span>
       </div>
     </div>
   );

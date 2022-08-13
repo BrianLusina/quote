@@ -15,9 +15,9 @@ export default function useFetchQuote(delay: number): {
   useInterval(async () => {
     try {
       setStatus(LOADING);
-      const quote = await quoteApiClient.fetchRandomQuote();
-      setQuote(quote.quote);
-      setAuthor(quote.author);
+      const { quote, author: originalAuthor } = await quoteApiClient.fetchRandomQuote();
+      setQuote(quote);
+      setAuthor(originalAuthor);
       setStatus(SUCCESS);
     } catch (error) {
       setStatus(FAILED);
